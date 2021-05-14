@@ -2,14 +2,10 @@
 #include <stdlib.h>
 
 int main() {
-    int size_of_int = sizeof(int);
-    int size_of_double = sizeof(double);
-    int size_of_float = sizeof(float);
-
     printf("Different types have different sizes!\n");
-    printf("An int has %i bytes.\n", size_of_int);
-    printf("A double has %i bytes.\n", size_of_double);
-    printf("A float has %i bytes.\n", size_of_float);
+    printf("An int allocates %i bytes.\n", sizeof(int));
+    printf("A double allocates %i bytes.\n", sizeof(double));
+    printf("A float allocates %i bytes.\n", sizeof(float));
 
     return EXIT_SUCCESS;
 }

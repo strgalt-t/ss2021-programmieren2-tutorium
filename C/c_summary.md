@@ -94,7 +94,7 @@ int main() {
 ```
 After typing it out in our editor and saving it as ``hello_world.c``, we can compile it with
 ```
-gcc hello_world.c -o hello_world
+clang hello_world.c -o hello_world
 ```
 Finally, we can run it on the command line.
 ```bash
@@ -110,7 +110,7 @@ You can include your own header files with
 ```
 but more on that later.
 
-Note: it's usual to return 0 if a function executes successfully and 1 if the function fails. If you want to build a program across platforms, use ``EXIT_SUCCESS`` and ``EXIT FAILURE`` as return values to avoid operating system specific confusions.
+Note: it's usual to return 0 if a function executes successfully and -1 if the function fails. If you want to build a program across platforms, use ``EXIT_SUCCESS`` and ``EXIT FAILURE`` as return values to avoid operating system specific confusions.
 
 ### Variables
 
@@ -392,7 +392,7 @@ If you do not insert a break statement, you will "fall through", which means it 
 ## for-loop
 
 ```c
-for (start_value; condition; increment) {
+for (start_value; condition; operation) {
     instruction
 }
 ```
