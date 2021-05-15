@@ -390,9 +390,12 @@ int main() {
 If you do not insert a break statement, you will "fall through", which means it will continue with the next case. This can be wanted behavior at some points, usually you don't want to forget your break statement though!
 
 ## for-loop
-
+A for-loop is a very convenient way to make counter-controlled loops
 ```c
-for (start_value; condition; operation) {
-    instruction
+for (initialize; test; step) {
+    statement
 }
 ```
+
+If the test evalues to false, the loop will stop and code execution outside of the loop body will continue. \
+It's important to choose the right test, if it always evaluates to true one has an endless loop.
