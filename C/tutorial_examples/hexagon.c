@@ -56,13 +56,61 @@ int printHexagon(Hexagon hexagon) {
 
     return EXIT_SUCCESS;
 }
+
+float calculateArea(Hexagon hexagon) {
+    int xSum = 0;
+    int ySum = 0;
+    Point pointArray[7];
+
+    for (int i = 0; i < sizeof(hexagon.hexagonPoints)/sizeof(Point); i++) {
+        pointArray[i] = hexagon.hexagonPoints[i];
+    }
+
+    pointArray[6] = hexagon.hexagonPoints[0];
+
+    for (int i = 0; i < 6; i++) {
+        xSum += pointArray[i].x * pointArray[i+1].y;
+    }
+
+    for (int i = 0; i < 6; i++) {
+        ySum += pointArray[i].y * pointArray[i+1].x;
+    }
+
+    float zErg = xSum - ySum;
+    if (zErg < 0) {
+        zErg = zErg * -1;
+    }
+
+    float erg = zErg/2;
+
+    return erg;
+
+}
 // ----------------------------------------------------------------------
 
+int * readNumbers(char * file_name) {
+    static int array[ARRAY_SIZE];
 
+    FILE *fp = fopen(file_name, "r");
+
+    if (fp == NULL) {
+        printf("Something went wrong while trying to open the file. Please check if the file exists and if you have sufficient permissions!\n");
+        exit(0);
+    }
+
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        fscanf(fp, "%i", &array[i]);
+    }
+
+    return array;
+
+
+}
+// ----------------------------------------------------------------------
 int main() {
-   /*
-    continuing here next week!
-   */
+    Hexagon hexagon = constructorHexagon(readNumbers("numbers.txt"));
+    
+    printf("Hexagon Area: %f\n", calculateArea(hexagon));
 
     return EXIT_SUCCESS;
 }
