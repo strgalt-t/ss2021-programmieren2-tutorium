@@ -109,7 +109,7 @@ int * readNumbers(char * file_name) {
 // ----------------------------------------------------------------------
 int main() {
     Hexagon hexagon = constructorHexagon(readNumbers("numbers.txt"));
-    
+
     printf("Hexagon Area: %f\n", calculateArea(hexagon));
 
     return EXIT_SUCCESS;
