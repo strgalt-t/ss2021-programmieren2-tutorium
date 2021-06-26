@@ -1,0 +1,11 @@
+==== ==== ==== ====
+==== Rechnung ==== 
+==== ==== ==== ====
+Hersteller: Schreckschraube & Co. GmbH
+Produkt: Hose
+Preis: 31.0 EUR
+Hersteller: Schreckschraube & Co. GmbH
+Produkt: Jacke
+Preis: 64.5 EUR
+==== ==== ==== ====
+Summe: 95.5 EUR

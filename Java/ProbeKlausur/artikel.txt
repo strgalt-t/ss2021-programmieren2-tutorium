@@ -1,0 +1,9 @@
+Anzahl Artikel: 2
+Produkt: Hose
+Hersteller: Schreckschraube & Co. GmbH
+Groesse: 2
+Material: Jeans,schwarz
+Produkt: Jacke
+Hersteller: Schreckschraube & Co. GmbH
+Groesse: 3
+Material: Seide,schweinchenrosa
